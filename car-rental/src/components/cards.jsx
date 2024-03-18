@@ -9,10 +9,35 @@ import {
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import SwiperCore from 'swiper/core'
+import {Navigation} from 'swiper/modules'
+SwiperCore.use([Navigation]);
+
 const Cards = () => {
   return (
-    <>
-      <div className="grid md:grid-cols-2 xl:grid-cols-3">
+    <Swiper
+    breakpoints={{
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1280: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    }}
+    navigation
+    spaceBetween={10}
+    slidesPerView={1}
+  >
+      {/* <div className="grid md:grid-cols-2 xl:grid-cols-3"> */}
+    <SwiperSlide>
         <div className="grid bg-white border-2 rounded-lg border-r-black grid-cols-1  gap-4 mb-8 w-[400px] mx-auto p-1 gap-14">
           <div className="carPic">
             <img
@@ -23,7 +48,7 @@ const Cards = () => {
           </div>
           <div className="details col-span-2 gap-6 pl-3">
             <div className="text-3xl font-serif font-semibold text-center">
-              Chevrolet Camaro
+              Chevrolet Camaro 1
             </div>
             <div className="icons mt-2">
               <div className="grid grid-cols-2 ml-[10px] font-semibold text-xl gap-16 ">
@@ -72,6 +97,8 @@ const Cards = () => {
             </div>
           </div>
         </div>
+        </SwiperSlide>
+        <SwiperSlide>
         <div className="grid bg-white border-2 rounded-lg border-r-black grid-cols-1  gap-4 mb-8 w-[400px] mx-auto p-1 gap-14">
           <div className="carPic">
             <img
@@ -82,7 +109,7 @@ const Cards = () => {
           </div>
           <div className="details col-span-2 gap-6 pl-3">
             <div className="text-3xl font-serif font-semibold text-center">
-              Chevrolet Camaro
+              Chevrolet Camaro 2
             </div>
             <div className="icons mt-2">
               <div className="grid grid-cols-2 ml-[10px] font-semibold text-xl gap-16 ">
@@ -131,6 +158,8 @@ const Cards = () => {
             </div>
           </div>
         </div>
+        </SwiperSlide>
+        <SwiperSlide>
         <div className="grid bg-white border-2 rounded-lg border-r-black grid-cols-1  gap-4 mb-8 w-[400px] mx-auto p-1 gap-14">
           <div className="carPic">
             <img
@@ -141,7 +170,7 @@ const Cards = () => {
           </div>
           <div className="details col-span-2 gap-6 pl-3">
             <div className="text-3xl font-serif font-semibold text-center">
-              Chevrolet Camaro
+              Chevrolet Camaro 3
             </div>
             <div className="icons mt-2">
               <div className="grid grid-cols-2 ml-[10px] font-semibold text-xl gap-16 ">
@@ -190,8 +219,9 @@ const Cards = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
+        </SwiperSlide>
+      {/* </div> */}
+    </Swiper>
   );
 };
 
