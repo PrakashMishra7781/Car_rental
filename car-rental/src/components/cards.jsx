@@ -9,35 +9,35 @@ import {
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-import SwiperCore from 'swiper/core'
-import {Navigation} from 'swiper/modules'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import SwiperCore from "swiper/core";
+import { Navigation } from "swiper/modules";
 SwiperCore.use([Navigation]);
 
 const Cards = () => {
   return (
     <Swiper
-    breakpoints={{
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      1280: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    }}
-    navigation
-    spaceBetween={10}
-    slidesPerView={1}
-  >
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      }}
+      navigation
+      spaceBetween={10}
+      slidesPerView={1}
+    >
       {/* <div className="grid md:grid-cols-2 xl:grid-cols-3"> */}
-    <SwiperSlide>
+      <SwiperSlide>
         <div className="grid bg-white border-2 rounded-lg border-r-black grid-cols-1  gap-4 mb-8 w-[400px] mx-auto p-1 gap-14">
           <div className="carPic">
             <img
@@ -97,8 +97,8 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        </SwiperSlide>
-        <SwiperSlide>
+      </SwiperSlide>
+      <SwiperSlide>
         <div className="grid bg-white border-2 rounded-lg border-r-black grid-cols-1  gap-4 mb-8 w-[400px] mx-auto p-1 gap-14">
           <div className="carPic">
             <img
@@ -158,8 +158,8 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        </SwiperSlide>
-        <SwiperSlide>
+      </SwiperSlide>
+      <SwiperSlide>
         <div className="grid bg-white border-2 rounded-lg border-r-black grid-cols-1  gap-4 mb-8 w-[400px] mx-auto p-1 gap-14">
           <div className="carPic">
             <img
@@ -219,7 +219,7 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        </SwiperSlide>
+      </SwiperSlide>
       {/* </div> */}
     </Swiper>
   );
