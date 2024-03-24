@@ -64,7 +64,7 @@ const Testimonial = () => {
               <div className="name text-sky-600 mx-auto font-semibold text-xl mt-5">
                 Devraj Aanand
               </div>
-              <div className=" mx-auto">Tharki Master</div>
+              <div className=" mx-auto">Master</div>
             </div>
           </SwiperSlide>
 
@@ -98,7 +98,7 @@ const Testimonial = () => {
               <div className="name text-sky-600 mx-auto font-semibold text-xl mt-5">
                 Sumit Jakhar
               </div>
-              <div className=" mx-auto">Chudakkad</div>
+              <div className=" mx-auto">Marwadi</div>
             </div>
           </SwiperSlide>
         </Swiper>
