@@ -2,6 +2,7 @@
 import Header from "./header";
 import "../css/upperPage.css";
 import TypeWriter from "./typewriter";
+import { Link } from "react-router-dom";
 const UpperPage = () => {
   return (
     <>
@@ -19,9 +20,11 @@ const UpperPage = () => {
             Experience the freedom of the road with our premium car rentals -
             your adventure awaits.
           </div>
-          <button className="border-2 ml-12 mt-4 text-white w-64 p-1 bg-sky-800 transition duration-300 ease-in-out transform scale-100 hover:scale-110">
-            Book Now
-          </button>
+          <Link to="/booking" className="ml-12 mt-4">
+            <button className="border-2 text-white w-64 p-1 bg-sky-800 transition duration-300 ease-in-out transform scale-100 hover:scale-110">
+              Book Now
+            </button>
+          </Link>
         </div>
       </div>
     </>

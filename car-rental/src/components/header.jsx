@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,12 +48,12 @@ const Header = () => {
               >
                 Home
               </a>
-              <a
-                href="#"
+              <Link
+                to="/cars"
                 className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-[55px]"
               >
                 Cars
-              </a>
+              </Link>
               <a
                 href="#"
                 className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-[55px]"
