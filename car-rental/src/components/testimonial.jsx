@@ -47,7 +47,7 @@ const Testimonial = () => {
               <div className="name text-sky-600 mx-auto font-semibold text-xl mt-5">
                 Puneet Kumar
               </div>
-              <div className=" mx-auto">Maugda</div>
+              <div className=" mx-auto">Research Analyst</div>
             </div>
           </SwiperSlide>
 
