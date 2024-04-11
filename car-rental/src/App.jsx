@@ -11,7 +11,9 @@ import CarsHeader from "./components/carsHeader";
 import { useState } from "react";
 import CarsList from "./components/carsList";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import BookingForm from "./components/bookingForm";
+import Book from "./components/book";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -56,10 +58,12 @@ function App() {
             path="/booking"
             element={
               <>
-                <BookingForm />
+                <Book />
               </>
             }
           />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </Router>

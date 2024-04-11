@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import SwiperCore from "swiper/core";
 import { Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 SwiperCore.use([Navigation]);
 
 const Cards = () => {
@@ -57,7 +58,7 @@ const Cards = () => {
             <div className="carPic">
               <img
                 src={car.image}
-                className="rounded-lg w-[400px] md:w-[380px] m-2 transition duration-300 ease-in-out transform scale-100 hover:scale-110"
+                className="rounded-lg w-[400px] h-[250px] md:w-[380px] m-2 transition duration-300 ease-in-out transform scale-100 hover:scale-110"
                 alt="Car"
               />
             </div>
@@ -108,9 +109,11 @@ const Cards = () => {
                     <FontAwesomeIcon icon={faHeart} />
                   </div>
                   <div className="buttonRent">
-                    <button className="border-2 m-3 p-1.5 hover:bg-slate-200 transition duration-300 ease-in-out transform scale-100 hover:scale-110 font-semibold rounded-lg bg-sky-600">
-                      Rent now
-                    </button>
+                    <Link to="/payment">
+                      <button className="border-2 m-3 p-1.5 hover:bg-slate-200 transition duration-300 ease-in-out transform scale-100 hover:scale-110 font-semibold rounded-lg bg-sky-600">
+                        Rent now
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

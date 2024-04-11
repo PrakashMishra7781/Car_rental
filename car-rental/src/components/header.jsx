@@ -55,17 +55,23 @@ const Header = () => {
                 Cars
               </Link>
               <a
-                href="#"
+                href="#about"
                 className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-[55px]"
               >
                 About
               </a>
               <a
-                href="#"
+                href="#services"
                 className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-[55px]"
               >
-                Contact
+                Services
               </a>
+              <Link
+                to="/login"
+                className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-[55px]"
+              >
+                SignIn
+              </Link>
             </div>
           </div>
         </nav>

@@ -1,7 +1,10 @@
 const Services = () => {
   return (
     <>
-      <div className="h-auto text-xl font-bold tracking-widest text-sky-500 mt-8 text-center">
+      <div
+        id="services"
+        className="h-auto text-xl font-bold tracking-widest text-sky-500 mt-8 text-center"
+      >
         SERVICES
       </div>
       <div className="h-auto text-3xl m-4 md:text-4xl font-semibold text-center font-serif">

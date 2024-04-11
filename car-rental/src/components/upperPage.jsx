@@ -16,9 +16,9 @@ const UpperPage = () => {
         <Header />
         <div className="typing text-white xl:mt-[35px] md:text-lg md:text-white xl:text-xl lg:mt-[65px]">
           <TypeWriter />
-          <div className="w-[350px] mt-4 ml-[40px] xl:w-[500px]">
-            Experience the freedom of the road with our premium car rentals -
-            your adventure awaits.
+          <div className="w-[350px] mt-4 ml-[40px] mb-4 xl:w-[500px]">
+            Experience convenience and innovation with Drive Smart at Next
+            Gen&apos;s car rental Junction.
           </div>
           <Link to="/booking" className="ml-12 mt-4">
             <button className="border-2 text-white w-64 p-1 bg-sky-800 transition duration-300 ease-in-out transform scale-100 hover:scale-110">

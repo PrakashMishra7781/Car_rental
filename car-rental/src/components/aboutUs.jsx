@@ -1,7 +1,7 @@
 const AboutUs = () => {
   return (
     <>
-      <div className="flex flex-col mt-32 md:flex-row bg-sky-200">
+      <div id="about" className="flex flex-col mt-32 md:flex-row bg-sky-200">
         <div className="image w-[80%] mx-auto mt-8 md:w-[48%]">
           <img src="/img/GoRideAbout.jpg" alt="" />
         </div>

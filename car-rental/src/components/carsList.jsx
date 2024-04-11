@@ -53,6 +53,9 @@ const CarsList = ({
 
   return (
     <>
+      <div className="font-bold text-3xl text-center mb-[12px]">
+        Choose your car
+      </div>
       <section className="cards flex flex-wrap justify-center gap-6">
         {itemsToDisplay.map((car, index) => (
           <div key={index} className="card-container">
