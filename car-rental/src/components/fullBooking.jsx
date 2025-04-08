@@ -94,6 +94,7 @@ const FullBooking = () => {
             value={selectedState}
             onChange={handleStateChange}
             className="w-full border rounded-md px-3 py-2 mt-4 focus:outline-none focus:ring focus:border-blue-500"
+            required
           >
             <option value="">Select a state</option>
             {states.map((state) => (
@@ -143,13 +144,13 @@ const FullBooking = () => {
             Landmark
           </label>
           <input
+            required
             type="text"
             id="landmark"
             className="w-full border rounded-md px-3 py-2 mt-1 focus:outline-none focus:ring focus:border-blue-500"
             value={landmark}
             onChange={handleLandmarkChange}
             placeholder="Enter landmark"
-            required
           />
         </div>
         <div className="mb-4">
@@ -160,12 +161,12 @@ const FullBooking = () => {
             DropOff Date and Time
           </label>
           <input
+            required
             type="datetime-local"
             id="pickupDateTime"
             className="w-full border rounded-md px-3 py-2 mt-1 focus:outline-none focus:ring focus:border-blue-500"
             value={pickupDateTime}
             onChange={handlePickupDateTimeChange}
-            required
           />
         </div>
       </form>

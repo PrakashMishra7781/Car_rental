@@ -18,7 +18,7 @@ SwiperCore.use([Navigation]);
 
 const Cards = () => {
   const [carData, setCarData] = useState([]);
-  console.log("CarData : " + JSON.stringify(carData));
+  // console.log("CarData : " + JSON.stringify(carData));
   useEffect(() => {
     const fetchData = async () => {
       try {

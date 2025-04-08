@@ -6,15 +6,27 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [profilePhoto, setProfilePhoto] = useState(null);
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("password", password);
+    if (profilePhoto) {
+      formData.append("profilePhoto", profilePhoto);
+    }
+
     axios
-      .post("http://localhost:3001/register", { name, email, password })
+      .post("http://localhost:3001/register", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
       .then((result) => {
         console.log(result);
-        if (result.data === "Already registered") {
+        if (result.data.message === "Email already registered") {
           alert("E-mail already registered! Please Login to proceed.");
           navigate("/login");
         } else {
@@ -31,51 +43,42 @@ const Register = () => {
         <h2 className="mb-4 text-2xl text-primary">Register</h2>
         <form onSubmit={handleSubmit} className="text-start">
           <div className="mb-4">
-            <label
-              htmlFor="exampleInputname"
-              className="block text-lg font-semibold"
-            >
-              Name
-            </label>
+            <label className="block text-lg font-semibold">Name</label>
             <input
               type="text"
               placeholder="Enter Name"
               className="form-input mt-1 block w-full border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              id="exampleInputname"
               onChange={(event) => setName(event.target.value)}
               required
             />
           </div>
           <div className="mb-4">
-            <label
-              htmlFor="exampleInputEmail1"
-              className="block text-lg font-semibold"
-            >
-              Email Id
-            </label>
+            <label className="block text-lg font-semibold">Email Id</label>
             <input
               type="email"
               placeholder="Enter Email"
               className="form-input mt-1 block w-full border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              id="exampleInputEmail1"
               onChange={(event) => setEmail(event.target.value)}
               required
             />
           </div>
           <div className="mb-4">
-            <label
-              htmlFor="exampleInputPassword1"
-              className="block text-lg font-semibold"
-            >
-              Password
-            </label>
+            <label className="block text-lg font-semibold">Password</label>
             <input
               type="password"
               placeholder="Enter Password"
               className="form-input mt-1 block w-full border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
-              id="exampleInputPassword1"
               onChange={(event) => setPassword(event.target.value)}
               required
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-lg font-semibold">Profile Photo</label>
+            <input
+              type="file"
+              accept="image/*"
+              className="form-input mt-1 block w-full border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+              onChange={(event) => setProfilePhoto(event.target.files[0])}
             />
           </div>
           <button type="submit" className="btn-primary py-2 px-4 rounded-md">
